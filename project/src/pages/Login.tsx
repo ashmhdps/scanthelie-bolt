@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { Scan, ShieldCheck, Brain, Sparkles, ArrowRight } from 'lucide-react';
+import BoltBadge from '../components/common/BoltBadge';
 
 export default function Login() {
   const { user, signInWithGoogle } = useAuth();
@@ -47,6 +48,8 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary-50 to-white">
+      <BoltBadge variant="black-circle" position="bottom-right" />
+      
       <div className="container mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           {/* Left Column - App Info */}

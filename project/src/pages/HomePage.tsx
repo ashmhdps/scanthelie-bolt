@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ShieldAlert, ArrowRight, Upload, BarChart3, History } from 'lucide-react';
 import Button from '../components/common/Button';
 import Card from '../components/common/Card';
+import BoltBadge from '../components/common/BoltBadge';
 
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
@@ -13,6 +14,8 @@ const HomePage: React.FC = () => {
   
   return (
     <div className="max-w-4xl mx-auto">
+      <BoltBadge variant="black-circle" position="bottom-right" />
+      
       <div className="text-center mb-12 animate-fade-in">
         <div className="inline-flex items-center justify-center p-2 bg-primary-100 rounded-full mb-4">
           <ShieldAlert size={32} className="text-primary-600" />
